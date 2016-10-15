@@ -1,14 +1,23 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+<p id="notice">
+  <%= notice %>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div class="row">
+  <div class="col-md-4">
+      <section class="user-info">
+        <%= gravatar_for @user%>
+          <div>
+            <p>
+              <%= @user.name %>
+            </p>
+            <h5>
+              <%= @user.email %>
+            </h5>
+          </div>
+      </section>
+  </div>
+</div>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <%= link_to 'Back', users_path %>

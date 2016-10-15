@@ -87,4 +87,47 @@ footer{
         margin-left: 15px;
         }
     }
+
+    @mixin box-sizing{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .debug{
+        clear: both;
+        float: left;
+        width: 100%;
+        margin-top: 45px;
+        @include box-sizing;
+    }
+}
+
+    .user-info {
+    margin-top: 20px;
+  
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    div{
+        float: left;   
+        p{
+            font-size: 3em;
+            letter-spacing: -1px;
+            margin-bottom: 0px;
+            line-height: 1em;
+        }
+        h5{
+            margin-top: 0px;
+        } 
+        
+      }  
+
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
 }
