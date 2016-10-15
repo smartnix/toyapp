@@ -1,7 +1,12 @@
 <p id="notice">
   <%= notice %>
 </p>
-
+<div>
+  <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+</div>
+ 
 <div class="row">
   <div class="col-md-4">
       <section class="user-info">
